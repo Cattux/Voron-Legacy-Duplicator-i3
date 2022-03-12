@@ -2,7 +2,7 @@
 
 ![Mock-up Design of Voron Legacy Duplicator i3](images/Legacy-Duplicator-i3.png)
 
-This project is still a work in progress and has not actually been physically made, please use any information found here at your own discretion.
+This project is still a work in progress. THe printer has been physically assembled but is still getting some config tweaks and tuning done. Please use any information found here at your own discretion.
 
 The plan for this project is to upcycle my Monoprice Maker Select 3D into a Voron Legacy, but should work for any Wanhao Duplicator i3 clones. The "plus" models will have additonal work for electronics but is out of scope since I do not have that model. Below are the goals this project is working towards or the "mission statement":
 
