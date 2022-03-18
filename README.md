@@ -2,20 +2,20 @@
 
 ![Mock-up Design of Voron Legacy Duplicator i3](images/Legacy-Duplicator-i3.png)
 
-This project is still a work in progress. THe printer has been physically assembled but is still getting some config tweaks and tuning done. Please use any information found here at your own discretion.
+This project is still a work in progress. The printer has been physically assembled but is still getting some config tweaks and tuning done. Please use any information found here at your own discretion.
 
-The plan for this project is to upcycle my Monoprice Maker Select 3D into a Voron Legacy, but should work for any Wanhao Duplicator i3 clones. The "plus" models will have additonal work for electronics but is out of scope since I do not have that model. Below are the goals this project is working towards or the "mission statement":
+The plan for this project is to upcycle my Monoprice Maker Select 3D into a Voron Legacy, but should work for any Wanhao Duplicator i3 clones. The "plus" models will have additonal work for electronics but is out of scope since I do not have that model. Below are the goals this project was working towards or the "mission statement":
 
-- [ ] Reuse the bed from the i3
+- [X] Reuse the bed from the i3
     - Requires 2 modified 3D printed parts (Qty 2 of each)
         - Z Bearing Retainer A Upper
         - Z Bearing Retainer B Upper
-- [ ] Forward compatible with future Legacy updates from Voron
-    - I don't want to fork this into a new printer entirely, at it's core it should still be a Voron Legacy
-- [ ] Require minimal rewiring
-    - the wire loop will probably need to be removed to split the cables to to go different places
-    - The thermister and heater cartridge will need to be replaced unless the hot end assembly is retro fitted to the Legacy X axis
-        - I may look at doing this at some point, but I really like the look of the Afterburner so I'm planning to start with that
+- [X] Forward compatible with future Legacy updates from Voron
+    - don't fork this into a new printer entirely, at it's core it should still be a Voron Legacy
+- [X] Require minimal rewiring
+    - the wire loop was removed to split the cables to to go different places
+    - The cable chain was cut off and replaced with 1/2" split wire loom tubing
+    - The thermister and heater cartridge were replaced with ones that fit a E3D v6 hotend that fits in the afterburner toolhead.
 
 # BOM 
 
@@ -52,7 +52,7 @@ Use the Configurator on the Legacy webpage to generate a full BOM. Modifications
 | Frame         | 2020 T-Slot Extusion - 400mm                    | 4**                        |                               |
 | Frame         | <strike>2020 T-Slot Extusion - 130mm</strike>   | <strike>2</strike> 0       | Replaced with next line       |
 | Frame         | 2020 T-Slot Extusion - 190mm                    | 2                          |                               |
-| Frame         | 2020 Corner Brackets (MiSUMi HBLFSNB5)          | 24***                      |                               |
+| Frame         | 2020 Corner Brackets (MiSUMi HBLFSNB5)          | 16***                      |                               |
 | Fasteners     | M5x40 SHCS                                      | 6                          |                               |
 | Fasteners     | M5x30 BHCS                                      | 12                         |                               |
 | Fasteners     | M5x16 BHCS                                      | <strike>41</strike> 89**** |                               |
@@ -76,28 +76,27 @@ Use the Configurator on the Legacy webpage to generate a full BOM. Modifications
 | Electronics   | BLTouch                                         | 1*****                     |                               |
 | Clockwork     | BMG dual drive extruder kit                     | 1                          |                               | 
 
-&ast;Possible to reuse 5 linear bearings from i3, if they can be removed from the bearing block.
+&ast;Possible to reuse 2 linear bearings from i3, if they can be removed from the bearing block.
 
 &ast;&ast;Not strictly required, but I think the assembly is easier with these modified lengths.
 
-&ast;&ast;&ast;I don't know why these aren't on the original BOM, I think this is an error in the Configurator. If not using Corner blocks these are required for Legacy builds. **Correction, the design intent is to have the ends of the extrusions tapped and drilled so that they can be screwed together with M5 bolts. I may assemble them this way, but I'll probably use the corner brackets too.**
+&ast;&ast;&ast;These aren't on the original BOM, the design intent is to have the ends of the extrusions tapped and drilled so that they can be screwed together with M5 bolts. In fact the design doesn't allow for them in all corners. I used them anyway since I already bought them, but I'd suggest leaving them off.
 
 &ast;&ast;&ast;&ast;I haven't looked to see where all of these are used, but I assume more will be required for the added corner brackets (2 per bracket).
 
-&ast;&ast;&ast;&ast;&ast;I am going to try to keep using my BLTouch as I really like printing on glass and the inductive probes only work on a spring steel plate.
+&ast;&ast;&ast;&ast;&ast;I am going to keep using my BLTouch as I really like printing on glass and the inductive probes only work on a spring steel plate.
 
 Other than the above categories, the rest of the BOM categories should be safe to ignore. I included a few lines from the "Electronics" category because they're required for the Afterburner extruder module. I also added a line for the BMG dual drive extruder kit because I plan on keeping this a direct drive printer, not a bowden printer like the default Legacy build has.
 
-**Note: I'm making a fairly big assumption that the existing harness will reach everywhere it needs to, this might prove to be an error. Stay tuned.**
-
 ## Printed Parts
 
-With 3 exceptions, all printed parts can be sourced from [Voron directly](https://github.com/VoronDesign/Voron-Legacy/releases/tag/V1.0). This repo was forked from the original Voron Legacy repo at release v1.0 and all STLs are still present in this repo for completeness, but it is best practice to get the latest files directly from Voron.
+With 5 exceptions, all printed parts can be sourced from [Voron directly](https://github.com/VoronDesign/Voron-Legacy/releases/tag/V1.0). This repo was forked from the original Voron Legacy repo at release v1.0 and all STLs are still present in this repo for completeness, but it is best practice to get the latest files directly from Voron.
 
 - The Z Bearing Retainer A Upper and Z Bearing Retainer B Upper needed to be modified to move the bed mounting hole 3mm away from the bearing hole in the X direction.
 - The install location of the "Z Shaft Support - Lower" also needs to be moved which required a redesign of the "Z Alignment Jig".
+- The x_carriage_left and x_carriage_right were modified to house a BLTouch instead of the induction probe. This is not required, but it's a not neater to have it hidden inside the carriage rather than hanging off the side. This way it's as close to the nozzle as possible as well. 
 
-These modified STLs are available in the STLs/i3 folder of this repo.
+These modified STLs are available in the STLs/i3 folder of this repo **with the exception being the BLTouch carriage. The carriage files are not yet in this repo as my original design worked but wasn't super robust; it's easy to accidentally bump the BLTouch out of place.**
 
 # CAD
 
