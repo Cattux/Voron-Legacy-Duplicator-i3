@@ -55,10 +55,10 @@ Use the Configurator on the Legacy webpage to generate a full BOM. Modifications
 | Frame         | 2020 Corner Brackets (MiSUMi HBLFSNB5)          | 16***                      |                               |
 | Fasteners     | M5x40 SHCS                                      | 6                          |                               |
 | Fasteners     | M5x30 BHCS                                      | 12                         |                               |
-| Fasteners     | M5x16 BHCS                                      | <strike>41</strike> 89**** |                               |
+| Fasteners     | M5x16 BHCS                                      | 41 <strike>89</strike>**** |                               |
 | Fasteners     | M5x10 BHCS                                      | 26                         |                               |
 | Fasteners     | M5 Washer                                       | 24                         |                               |
-| Fasteners     | M5 T-Nut                                        | <strike>51</strike> 99**** |                               |
+| Fasteners     | M5 T-Nut                                        | 51 <strike>99</strike>**** |                               |
 | Fasteners     | M5 Hexnut                                       | 4                          |                               |
 | Fasteners     | M4x8 BHCS                                       | 5                          |                               |
 | Fasteners     | M3x8 SHCS                                       | 20                         |                               |
@@ -82,7 +82,7 @@ Use the Configurator on the Legacy webpage to generate a full BOM. Modifications
 
 &ast;&ast;&ast;These aren't on the original BOM, the design intent is to have the ends of the extrusions tapped and drilled so that they can be screwed together with M5 bolts. In fact the design doesn't allow for them in all corners. I used them anyway since I already bought them, but I'd suggest leaving them off.
 
-&ast;&ast;&ast;&ast;I haven't looked to see where all of these are used, but I assume more will be required for the added corner brackets (2 per bracket).
+&ast;&ast;&ast;&ast; I originally added more to the BOM for the corner brackets, but the corner brackets are totally not required. 
 
 &ast;&ast;&ast;&ast;&ast;I am going to keep using my BLTouch as I really like printing on glass and the inductive probes only work on a spring steel plate.
 
